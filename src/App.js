@@ -1,18 +1,20 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import SignForm from './pages/SignForm';
+import Auth from './pages/Auth';
+import Todo from './pages/Todo';
+import NotFound from './pages/NotFound';
 
 function App() {
   return <>
-  <BrowserRouter>
+  {/* <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/signup" element={<SignForm />} />
-      <Route path="/signin" element={<LoginForm />} />
-      <Route path="/todo" element={<TodoList />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/" element={<Auth login={false} />} />
+      <Route path="/signup" element={<Auth login={false} />} />
+      <Route path="/signin" element={<Auth login={true} />} />
+      <Route path="/todo" element={<Todo />} />
+      <Route path="/NotFound" element={<NotFound />} />
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter> */}
   </>;
 }
 
