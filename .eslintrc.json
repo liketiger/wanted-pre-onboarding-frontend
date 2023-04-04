@@ -5,6 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
         "airbnb"
     ],
     "overrides": [
@@ -17,6 +18,8 @@
         "react"
     ],
     "rules": {
-        "comma-dangle": 0
+        "comma-dangle": 0,
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     }
 }
