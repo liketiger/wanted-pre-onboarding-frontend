@@ -9,35 +9,35 @@ const Auth = props => {
   const emailInput = useRef();
   const pwdInput = useRef();
 
-  // useEffect(() => {
-  //   if (localStorage.getItem('jwt')) navigate('/todo');
-  // }, []);
+  useEffect(() => {
+    if (localStorage.getItem('jwt')) navigate('/todo');
+  }, []);
 
-  // const clearInput = () => {
-  //   emailInput.current.value = '';
-  //   pwdInput.current.value = '';
-  // }
+  const clearInput = () => {
+    emailInput.current.value = '';
+    pwdInput.current.value = '';
+  }
 
-  // const httpHandler = async body => {
-  //   if (!login) {
-  //     requestHttp({ method: 'POST', url: '/auth/signup', body});
-  //     navigate('/signin', {replace: true});
-  //   }
-  //   else {
-  //     const res = await requestHttp({ method: 'POST', url: '/auth/signin', body});
-  //     localStorage.setItem('jwt', res);
-  //     navigate('/todo', {replace: true});
-  //   }
-  // }
+  const httpHandler = async body => {
+    if (!login) {
+      requestHttp({ method: 'POST', url: '/auth/signup', body});
+      // navigate('/signin', {replace: true});
+    }
+    else {
+      const res = await requestHttp({ method: 'POST', url: '/auth/signin', body});
+      // localStorage.setItem('jwt', res);
+      // navigate('/todo', {replace: true});
+    }
+  }
 
-  // const submitHandler = e => {
-  //   e.preventDefault();
-  //   const { value: email } = emailInput.current;
-  //   const { value: password } = pwdInput.current;
-  //   clearInput();
-  //   const body = { email, password };
-  //   httpHandler(body);
-  // };
+  const submitHandler = e => {
+    e.preventDefault();
+    const { value: email } = emailInput.current;
+    const { value: password } = pwdInput.current;
+    clearInput();
+    const body = { email, password };
+    httpHandler(body);
+  };
 
   const validate = () => {
     const { value: email } = emailInput.current;

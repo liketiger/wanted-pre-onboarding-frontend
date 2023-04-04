@@ -24,7 +24,8 @@
   - [x] disable the button if validation fails.
 
 - [ ] Assignment 2
-  - [ ] navigate to signin page from signup page when signup btn was clicked and signup was successful.
+  - [x] write code that fetch response through given API for each signup and signin
+  - [x] navigate to signin page from signup page when signup btn was clicked and signup was successful.
 
 - [ ] Assignment 3
   - [ ] navigate to todo page from signin page when signin btn was clicked and signin was successful.
@@ -59,6 +60,7 @@
 - [ ] make sure every function has less than 15 lines
 - [ ] make sure every function has no more than 3 parameters
 - [ ] extract constant values into constant file
+- [ ] handle error
 
 ## ETC
 - [ ] update UI styles
