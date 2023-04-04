@@ -19,9 +19,9 @@
 # 👉 Feature Implementation list
 
 ## Signup / Signin
-- [ ] Assignment 1
-  - [ ] write validation code for email and pwd.
-  - [ ] disable the button if validation fails.
+- [x] Assignment 1
+  - [x] write validation code for email and pwd.
+  - [x] disable the button if validation fails.
 
 - [ ] Assignment 2
   - [ ] navigate to signin page from signup page when signup btn was clicked and signup was successful.
