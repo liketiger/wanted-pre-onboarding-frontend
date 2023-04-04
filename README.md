@@ -62,7 +62,7 @@
 
 ## ETC
 - [ ] update UI styles
-- [ ] set routers
+- [ ] set routers and page
 - [x] write and modify docs
 - [ ] adjust settings
 - [ ] deploy website
