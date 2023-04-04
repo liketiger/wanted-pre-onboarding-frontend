@@ -6,6 +6,7 @@
     "extends": [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
+        "prettier/react",
         "airbnb"
     ],
     "overrides": [
@@ -20,6 +21,6 @@
     "rules": {
         "comma-dangle": 0,
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
 }

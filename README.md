@@ -31,9 +31,9 @@
   - [x] navigate to todo page from signin page when signin btn was clicked and signin was successful.
   - [x] store jwt response into localStorage
 
-- [ ] Assignment 4
-  - [ ] redirect to todo page when user access signin or signup page with jwt;
-  - [ ] redirect to signin page when user access todo page without jwt;
+- [x] Assignment 4
+  - [x] redirect to todo page when user access signin or signup page with jwt;
+  - [x] redirect to signin page when user access todo page without jwt;
 
 ## TODO List
 - [ ] Assignment 5
