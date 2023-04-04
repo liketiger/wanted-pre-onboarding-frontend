@@ -23,13 +23,13 @@
   - [x] write validation code for email and pwd.
   - [x] disable the button if validation fails.
 
-- [ ] Assignment 2
+- [x] Assignment 2
   - [x] write code that fetch response through given API for each signup and signin
   - [x] navigate to signin page from signup page when signup btn was clicked and signup was successful.
 
-- [ ] Assignment 3
-  - [ ] navigate to todo page from signin page when signin btn was clicked and signin was successful.
-  - [ ] store jwt response into localStorage
+- [x] Assignment 3
+  - [x] navigate to todo page from signin page when signin btn was clicked and signin was successful.
+  - [x] store jwt response into localStorage
 
 - [ ] Assignment 4
   - [ ] redirect to todo page when user access signin or signup page with jwt;

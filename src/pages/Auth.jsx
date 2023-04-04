@@ -21,12 +21,12 @@ const Auth = props => {
   const httpHandler = async body => {
     if (!login) {
       requestHttp({ method: 'POST', url: '/auth/signup', body});
-      // navigate('/signin', {replace: true});
+      navigate('/signin', {replace: true});
     }
     else {
       const res = await requestHttp({ method: 'POST', url: '/auth/signin', body});
-      // localStorage.setItem('jwt', res);
-      // navigate('/todo', {replace: true});
+      localStorage.setItem('jwt', res);
+      navigate('/todo', {replace: true});
     }
   }
 
