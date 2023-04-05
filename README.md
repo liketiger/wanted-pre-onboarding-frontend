@@ -37,7 +37,8 @@
 
 ## TODO List
 - [ ] Assignment 5
-  - [ ] show todo list when user access todo page
+  - [ ] write code that fetch TODO List
+  - [ ] show TODO list when user access todo page
 
 - [ ] Assignment 6
   - [ ] make feature for users to input new TODO

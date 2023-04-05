@@ -2,12 +2,13 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import requestHttp from '../utils/fetch-settings';
 
-const Auth = (props) => {
+const Auth = props => {
   const [isValid, setIsValid] = useState(false);
   const navigate = useNavigate();
   const { login } = props;
   const emailInput = useRef();
   const pwdInput = useRef();
+  let token = '';
 
   useEffect(() => {
     if (localStorage.getItem('jwt')) navigate('/todo');
@@ -18,22 +19,28 @@ const Auth = (props) => {
     pwdInput.current.value = '';
   };
 
-  const httpHandler = async (body) => {
+  const getValue = val => {
+    token = val.access_token;
+  };
+
+  const httpHandler = async body => {
+    const req = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      getValue,
+      body
+    };
     if (!login) {
-      requestHttp({ method: 'POST', url: '/auth/signup', body });
+      requestHttp({ ...req, url: '/auth/signup' });
       navigate('/signin', { replace: true });
     } else {
-      const res = await requestHttp({
-        method: 'POST',
-        url: '/auth/signin',
-        body,
-      });
-      localStorage.setItem('jwt', res);
+      await requestHttp({ ...req, url: '/auth/signin' });
+      localStorage.setItem('jwt', token);
       navigate('/todo', { replace: true });
     }
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = e => {
     e.preventDefault();
     const { value: email } = emailInput.current;
     const { value: password } = pwdInput.current;
