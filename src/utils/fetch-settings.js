@@ -9,7 +9,7 @@ const requestHttp = async req => {
     });
 
     if (req.url.includes('signup') && res.status === 201) return;
-    if (req.url.includes('todo') && res.status === 201) return;
+    if (req.url.includes('delete') && res.status === 201) return;
 
     const response = await res.json();
     if (res.statusCode >= 400) throw Error(response.message);

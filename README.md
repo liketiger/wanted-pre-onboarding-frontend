@@ -36,13 +36,13 @@
   - [x] redirect to signin page when user access todo page without jwt;
 
 ## TODO List
-- [ ] Assignment 5
-  - [ ] write code that fetch TODO List
-  - [ ] show TODO list when user access todo page
+- [x] Assignment 5
+  - [x] write code that fetch TODO List
+  - [x] show TODO list when user access todo page
 
-- [ ] Assignment 6
-  - [ ] make feature for users to input new TODO
-  - [ ] make sure new TODO remains the same after refreshing the page.
+- [x] Assignment 6
+  - [x] make feature for users to input new TODO
+  - [x] make sure new TODO remains the same after refreshing the page.
 
 - [ ] Assignment 7
   - [ ] make checkbox that can modify completion status.
@@ -68,4 +68,5 @@
 - [x] set routers and page
 - [x] write and modify docs
 - [x] adjust settings
+- [ ] setup Context API and useReducer
 - [ ] deploy website

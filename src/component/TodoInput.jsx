@@ -1,9 +1,5 @@
-const TodoInput = props => {
-  const { setValue } = props;
-  const changeHandler = e => setValue(e.target.value);
-  return (
-    <input type='text' data-testid='new-todo-input' onChange={changeHandler} />
-  );
-};
+import { forwardRef } from "react";
+
+const TodoInput = forwardRef((props, ref) => <input {...props} ref={ref} />);
 
 export default TodoInput;

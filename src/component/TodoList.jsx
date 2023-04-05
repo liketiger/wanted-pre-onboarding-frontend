@@ -1,16 +1,19 @@
-export const TodoList = () => {
+import { useContext, useEffect } from "react"
+import TodoContext from "../store/todo-context"
+import TodoItem from "./TodoItem";
+
+const TodoList = () => {
+  const todoCtx = useContext(TodoContext);
+
+  useEffect(() => {
+    if (localStorage.getItem('jwt')) todoCtx.fetchTodoHandler();
+  }, []);
+
   return (
-    <li>
-  <label>
-    <input type="checkbox" />
-    <span>TODO 1</span>
-  </label>
-</li>
-<li>
-  <label>
-    <input type="checkbox" />
-    <span>TODO 2</span>
-  </label>
-</li>
+    <>
+      {todoCtx.todoList.map(todo => <TodoItem item={todo} />)}
+    </>
   )
-}
+};
+
+export default TodoList;

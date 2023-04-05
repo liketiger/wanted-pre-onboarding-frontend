@@ -1,28 +1,21 @@
-import { useState } from 'react';
+import { useRef, useContext } from 'react';
 import TodoInput from './TodoInput';
 import TodoBtn from './TodoBtn';
-import requestHttp from '../utils/fetch-settings';
+import TodoContext from '../store/todo-context';
 
 const TodoAdder = () => {
-  const [value, setValue] = useState('');
+  const addInputValue = useRef(null);
+  const todoCtx = useContext(TodoContext);
 
   const submitHandler = e => {
     e.preventDefault();
-    requestHttp({
-      url: '/todos',
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('jwt')}`,
-        'Content-Type': 'application/json',
-      },
-      body: { todo: value },
-    });
+    todoCtx.addTodoHandler(addInputValue.current.value);
   };
 
   return (
     <form onSubmit={submitHandler}>
-      <TodoInput setValue={setValue} />
-      <TodoBtn type='submit' content='추가' />
+      <TodoInput ref={addInputValue} />
+      <TodoBtn>추가</TodoBtn>
     </form>
   );
 };
