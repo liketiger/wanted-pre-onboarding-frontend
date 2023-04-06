@@ -1,7 +1,7 @@
 import { useRef, useContext } from 'react';
-import TodoInput from './TodoInput';
-import TodoBtn from './TodoBtn';
-import TodoContext from '../store/todo-context';
+import Input from '../Input';
+import Button from '../Button';
+import TodoContext from '../../store/todo-context';
 
 const TodoAdder = () => {
   const addInputValue = useRef(null);
@@ -15,8 +15,8 @@ const TodoAdder = () => {
 
   return (
     <form onSubmit={submitHandler}>
-      <TodoInput ref={addInputValue} />
-      <TodoBtn>추가</TodoBtn>
+      <Input ref={addInputValue} />
+      <Button>추가</Button>
     </form>
   );
 };
