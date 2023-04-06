@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from 'react';
+import { useState, useRef, useContext, useEffect } from 'react';
 import TodoContext from '../../store/todo-context';
 import Button from '../Button';
 import Input from '../Input';
@@ -10,10 +10,14 @@ const TodoItem = ({ item }) => {
   const editRef = useRef(null);
   const todoCtx = useContext(TodoContext);
 
+  useEffect(() => {
+    if (editMode) editRef.current.focus();
+  }, [editMode]);
+
   const editHandler = () => setEditMode(prev => !prev);
   const deleteHandler = () => todoCtx.deleteTodoHandler(id);
   const completeHandler = () =>
-    todoCtx.completeTodoHandler(id, todo, isCompleted);
+    todoCtx.completeTodoHandler(id, todo, !isCompleted);
 
   const updateHandler = () => {
     editHandler();
@@ -23,7 +27,7 @@ const TodoItem = ({ item }) => {
   return (
     <li>
       <label>
-        <input type='checkbox' onClick={completeHandler} />
+        <input type='checkbox' onClick={completeHandler} checked={isCompleted}/>
         {!editMode && <span>{todo}</span>}
         {editMode && (
           <Input

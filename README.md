@@ -60,6 +60,7 @@
 - [x] make sure every function has less than 15 lines
 - [x] make sure every function has no more than 3 parameters
 - [x] extract constant values into constant file
+- [ ] optimize with useCallback and useMemo
 - [ ] handle error
 
 ## ETC
