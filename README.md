@@ -57,9 +57,9 @@
 
 ## Refactor
 - [x] Divide into files
-- [ ] make sure every function has less than 15 lines
-- [ ] make sure every function has no more than 3 parameters
-- [ ] extract constant values into constant file
+- [x] make sure every function has less than 15 lines
+- [x] make sure every function has no more than 3 parameters
+- [x] extract constant values into constant file
 - [ ] handle error
 
 ## ETC
