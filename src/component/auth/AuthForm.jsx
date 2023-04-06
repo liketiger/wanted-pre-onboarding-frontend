@@ -3,13 +3,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import Input from '../Input';
 import requestHttp from '../../utils/fetch-settings';
 import Button from '../Button';
+import CONSTANTS from '../../utils/constants';
 
 const AuthForm = props => {
   const [isValid, setIsValid] = useState(false);
   const navigate = useNavigate();
-  const { login } = props;
   const emailInput = useRef();
   const pwdInput = useRef();
+
+  const { getAuth } = CONSTANTS;
+  const { login } = props;
 
   let token = '';
 
@@ -23,17 +26,11 @@ const AuthForm = props => {
   };
 
   const httpHandler = async body => {
-    const req = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      getValue,
-      body
-    };
     if (!login) {
-      requestHttp({ ...req, url: '/auth/signup' });
+      requestHttp(getAuth(login, body, getValue));
       navigate('/signin', { replace: true });
     } else {
-      await requestHttp({ ...req, url: '/auth/signin' });
+      await requestHttp(getAuth(login, body, getValue));
       localStorage.setItem('jwt', token);
       navigate('/todo', { replace: true });
     }

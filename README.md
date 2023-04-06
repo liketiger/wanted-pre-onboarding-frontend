@@ -56,7 +56,7 @@
   - [x] implement update feature of TODO
 
 ## Refactor
-- [ ] Divide into files
+- [x] Divide into files
 - [ ] make sure every function has less than 15 lines
 - [ ] make sure every function has no more than 3 parameters
 - [ ] extract constant values into constant file
@@ -68,5 +68,5 @@
 - [x] write and modify docs
 - [x] adjust settings
 - [x] setup Context API and useReducer
-- [ ] add logout feature
+- [x] add logout feature
 - [ ] deploy website

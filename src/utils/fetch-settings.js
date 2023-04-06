@@ -1,8 +1,10 @@
-const BASE_URL = 'https://www.pre-onboarding-selection-task.shop';
+import CONSTANTS from "./constants";
+
+const { API_URL } = CONSTANTS;
 
 const requestHttp = async req => {
   try {
-    const res = await fetch(`${BASE_URL}${req.url}`, {
+    const res = await fetch(`${API_URL}${req.url}`, {
       method: req.method,
       headers: req.headers ?? {},
       body: req.body ? JSON.stringify(req.body) : null,

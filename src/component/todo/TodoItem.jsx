@@ -4,17 +4,20 @@ import Button from '../Button';
 import Input from '../Input';
 
 const TodoItem = ({ item }) => {
-  const { id, isCompleted, todo } = item;
   const [editMode, setEditMode] = useState(false);
+  const { id, todo, isCompleted } = item;
+
   const editRef = useRef(null);
   const todoCtx = useContext(TodoContext);
+
   const editHandler = () => setEditMode(prev => !prev);
   const deleteHandler = () => todoCtx.deleteTodoHandler(id);
   const completeHandler = () =>
-    todoCtx.completeTodoHandler(id, isCompleted, todo);
+    todoCtx.completeTodoHandler(id, todo, isCompleted);
+
   const updateHandler = () => {
     editHandler();
-    todoCtx.updateTodoHandler(id, isCompleted, editRef.current.value);
+    todoCtx.updateTodoHandler(id, editRef.current.value, isCompleted);
   };
 
   return (

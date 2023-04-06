@@ -1,5 +1,8 @@
 import React, { useReducer } from "react";
 import requestHttp from "../utils/fetch-settings";
+import CONSTANTS from "../utils/constants";
+
+const { getTodo, addTodo, deleteTodo, updateTodo } = CONSTANTS;
 
 const TodoContext = React.createContext({
   todoList: []
@@ -55,93 +58,39 @@ export const TodoProvider = props => {
       responseData = data;
     }
 
-    await requestHttp({
-      url: '/todos',
-      method: 'GET',
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('jwt')}`
-      },
-      getValue: fetchTodo
-    });
-
+    await requestHttp(getTodo(fetchTodo));
     dispatchTodo({ type: 'FETCH', todoList: responseData });
   };
 
   const addTodoHandler = async newTodo => {
     if (newTodo.trim().length === 0) return;
-
-    const addTodo = data => {
+    const addNewTodo = data => {
       responseData = data;
     }
 
-    await requestHttp({
-      url: '/todos',
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('jwt')}`,
-        'Content-Type': 'application/json',
-      },
-      body: {
-        todo: newTodo
-      },
-      getValue: addTodo
-    });
-
+    await requestHttp(addTodo(newTodo, addNewTodo));
     dispatchTodo({ type: 'ADD', newTodo: responseData });
   };
 
   const deleteTodoHandler = async id => {
-    await requestHttp({
-      url: `/todos/${id}`,
-      method: 'DELETE',
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('jwt')}`,
-      },
-    });
-
+    await requestHttp(deleteTodo(id));
     dispatchTodo({ type: 'DELETE', id });
   };
 
-  const completeTodoHandler = async (id, isCompleted, todo) => {
+  const completeTodoHandler = async (id, todo, isCompleted) => {
     const completeTodo = () => {};
-    await requestHttp({
-      url: `/todos/${id}`,
-      method: 'PUT',
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('jwt')}`,
-        'Content-Type': 'application/json',
-      },
-      body: {
-        todo,
-        isCompleted
-      },
-      getValue: completeTodo
-    });
 
+    await requestHttp(updateTodo(id, todo, isCompleted, completeTodo));
     dispatchTodo({ type: 'COMPLETE', id });
   };
 
-  const updateTodoHandler = async (id, isCompleted, todo) => {
-    if (todo.trim().length === 0) return;
-
-    const updateTodo = data => {
+  const updateTodoHandler = async (id, newTodo, isCompleted) => {
+    if (newTodo.trim().length === 0) return;
+    const updateNewTodo = data => {
       responseData = data;
     };
 
-    await requestHttp({
-      url: `/todos/${id}`,
-      method: 'PUT',
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('jwt')}`,
-        'Content-Type': 'application/json',
-      },
-      body: {
-        todo,
-        isCompleted
-      },
-      getValue: updateTodo
-    });
-
+    await requestHttp(updateTodo(id, newTodo, isCompleted, updateNewTodo));
     dispatchTodo({ type: 'UPDATE', newTodo: responseData });
   };
 
