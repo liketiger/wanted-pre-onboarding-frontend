@@ -10,6 +10,7 @@ const TodoAdder = () => {
   const submitHandler = e => {
     e.preventDefault();
     todoCtx.addTodoHandler(addInputValue.current.value);
+    addInputValue.current.value = '';
   };
 
   return (

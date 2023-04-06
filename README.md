@@ -44,17 +44,17 @@
   - [x] make feature for users to input new TODO
   - [x] make sure new TODO remains the same after refreshing the page.
 
-- [ ] Assignment 7
-  - [ ] make checkbox that can modify completion status.
+- [x] Assignment 7
+  - [x] make checkbox that can modify completion status.
 
-- [ ] Assignment 8
-  - [ ] make update and delete btn on the right side of TODO.
+- [x] Assignment 8
+  - [x] make update and delete btn on the right side of TODO.
 
-- [ ] Assignment 9
-  - [ ] implement delete feature of TODO
+- [x] Assignment 9
+  - [x] implement delete feature of TODO
 
-- [ ] Assignment 10
-  - [ ] implement update feature of TODO
+- [x] Assignment 10
+  - [x] implement update feature of TODO
 
 ## Refactor
 - [ ] Divide into files
@@ -68,5 +68,5 @@
 - [x] set routers and page
 - [x] write and modify docs
 - [x] adjust settings
-- [ ] setup Context API and useReducer
+- [x] setup Context API and useReducer
 - [ ] deploy website

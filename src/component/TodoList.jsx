@@ -11,7 +11,7 @@ const TodoList = () => {
 
   return (
     <>
-      {todoCtx.todoList.map(todo => <TodoItem item={todo} />)}
+      {todoCtx.todoList.map(todo => <TodoItem key={todo.id} item={todo} />)}
     </>
   )
 };

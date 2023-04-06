@@ -87,7 +87,7 @@ export const TodoProvider = props => {
       getValue: addTodo
     });
 
-    dispatchTodo({ type: 'ADD', responseData });
+    dispatchTodo({ type: 'ADD', newTodo: responseData });
   };
 
   const deleteTodoHandler = async id => {
