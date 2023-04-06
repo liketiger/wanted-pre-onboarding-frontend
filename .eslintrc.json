@@ -32,6 +32,7 @@
         "no-console": "off",
         "arrow-parens": ["error", "as-needed"],
         "import/no-unresolved": 0,
-        "import/extensions": 0
+        "import/extensions": 0,
+        "react-hooks/exhaustive-deps": 0
     }
 }
