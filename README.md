@@ -68,4 +68,5 @@
 - [x] write and modify docs
 - [x] adjust settings
 - [x] setup Context API and useReducer
+- [ ] add logout feature
 - [ ] deploy website
