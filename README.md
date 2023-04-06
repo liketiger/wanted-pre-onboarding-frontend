@@ -7,9 +7,8 @@
 **Type of commit**
 
 * feat : implement new features
-* settings : set initial state (formatter, ...)
+* settings : set initial state or change style (formatter, ...)
 * fix : fix bugs
-* style : fix styles (formatting, ...)
 * markup: adjust markup and css
 * refactor : code refactoring
 * docs : add or modify documentations
