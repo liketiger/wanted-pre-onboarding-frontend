@@ -71,3 +71,6 @@
 - [x] setup Context API and useReducer
 - [x] add logout feature
 - [ ] deploy website
+
+// 스타일 -> 배포 -> 리드미 작성
+// 최적화 -> 이력서 작성 -> 제출

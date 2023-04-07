@@ -1,15 +1,27 @@
 import { Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
 import './App.css';
 import Auth from './pages/Auth';
 import Todo from './pages/Todo';
+import GlobalStyle from './utils/global-style';
 
 const App = () => (
-  <Routes>
-    <Route path='/' element={<Auth login />} />
-    <Route path='/signup' element={<Auth login={false} />} />
-    <Route path='/signin' element={<Auth login />} />
-    <Route path='/todo' element={<Todo />} />
-  </Routes>
+  <>
+    <GlobalStyle />
+    <Wrapper>
+      <Routes>
+        <Route path='/' element={<Auth login />} />
+        <Route path='/signup' element={<Auth login={false} />} />
+        <Route path='/signin' element={<Auth login />} />
+        <Route path='/todo' element={<Todo />} />
+      </Routes>
+    </Wrapper>
+  </>
 );
+
+const Wrapper = styled.div`
+  width: 1000px;
+  margin: 100px auto;
+`;
 
 export default App;
