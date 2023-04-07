@@ -12,7 +12,8 @@ https://wanted-pre-onboarding-frontend-mu-silk.vercel.app/
 
 # 👉 데모 영상
 
-![ezgif com-optimize](https://user-images.githubusercontent.com/50165633/230553864-cc292a8a-d889-40be-8e4d-45646c5b9419.gif)
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/50165633/230559119-90ee54b8-2ded-41c2-8223-d5c963ee5e13.gif)
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/50165633/230560805-aa57cf40-9a41-4354-8f89-1f6774d5e0dc.gif)
 
 <br>
 
