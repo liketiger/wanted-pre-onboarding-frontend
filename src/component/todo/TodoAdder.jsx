@@ -18,7 +18,7 @@ const TodoAdder = () => {
 
   const logoutHandler = () => {
     localStorage.removeItem('jwt');
-    navigate('/signin');
+    navigate('/signin', { replace: true });
   }
 
   return (

@@ -61,16 +61,15 @@
 - [x] make sure every function has no more than 3 parameters
 - [x] extract constant values into constant file
 - [ ] optimize with useCallback and useMemo
-- [ ] handle error
+- [x] handle error
 
 ## ETC
-- [ ] update UI styles
+- [x] update UI styles
 - [x] set routers and page
 - [x] write and modify docs
 - [x] adjust settings
 - [x] setup Context API and useReducer
 - [x] add logout feature
-- [ ] deploy website
+- [x] deploy website
 
-// 스타일 -> 배포 -> 리드미 작성
 // 최적화 -> 이력서 작성 -> 제출
