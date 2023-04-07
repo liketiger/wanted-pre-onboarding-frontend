@@ -1,3 +1,21 @@
+# 👉 프로젝트의 실행 방법
+
+> npm install<br>npm start
+
+<br>
+
+# 👉 배포 사이트 주소
+
+https://wanted-pre-onboarding-frontend-mu-silk.vercel.app/
+
+<br>
+
+# 👉 데모 영상
+
+![ezgif com-optimize](https://user-images.githubusercontent.com/50165633/230553864-cc292a8a-d889-40be-8e4d-45646c5b9419.gif)
+
+<br>
+
 # 👉 Github commit convention
 
 > Message format : <br>`type of commit : commit message`
@@ -71,5 +89,3 @@
 - [x] setup Context API and useReducer
 - [x] add logout feature
 - [x] deploy website
-
-// 최적화 -> 이력서 작성 -> 제출
