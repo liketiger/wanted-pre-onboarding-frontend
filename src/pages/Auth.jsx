@@ -9,6 +9,7 @@ const Auth = props => {
   const { login } = props;
 
   useEffect(() => {
+    document.querySelector('title').innerText = 'TODO APP'
     if (localStorage.getItem('jwt')) navigate('/todo');
   }, []);
 
