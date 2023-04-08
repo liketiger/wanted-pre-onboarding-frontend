@@ -35,7 +35,7 @@ const TodoItem = ({ item, index }) => {
           <UpdateInput
             type='text'
             defaultValue={todo}
-            data-testid='new-todo-input'
+            data-testid="modify-input"
             ref={editRef}
           />
         )}

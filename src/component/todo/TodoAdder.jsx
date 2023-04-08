@@ -23,8 +23,8 @@ const TodoAdder = () => {
 
   return (
     <Form onSubmit={submitHandler}>
-      <AdderInput ref={addInputValue} />
-      <AdderBtn>추가</AdderBtn>
+      <AdderInput data-testid="new-todo-input" ref={addInputValue} />
+      <AdderBtn data-testid="new-todo-add-button">추가</AdderBtn>
       <LogoutBtn onClick={logoutHandler}>로그아웃</LogoutBtn>
     </Form>
   );
