@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
-import './App.css';
 import Auth from './pages/Auth';
 import Todo from './pages/Todo';
 import GlobalStyle from './utils/global-style';
