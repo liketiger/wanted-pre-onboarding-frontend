@@ -90,3 +90,7 @@ https://wanted-pre-onboarding-frontend-mu-silk.vercel.app/
 - [x] setup Context API and useReducer
 - [x] add logout feature
 - [x] deploy website
+
+이력서 / 가이드라인 확인 / 제출
+리액트 강의 마무리 / usecallback memo 복습
+로아제작

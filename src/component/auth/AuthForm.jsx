@@ -15,25 +15,29 @@ const AuthForm = props => {
   const { getAuth } = CONSTANTS;
   const { login } = props;
 
-  let token = '';
+  let error = false;
 
   const clearInput = () => {
     emailInput.current.value = '';
     pwdInput.current.value = '';
   };
 
-  const getValue = val => {
-    token = val.access_token;
+  const getValue = (val, isOk) => {
+    if (!isOk) {
+      alert(val.message);
+      error = true;
+      return;
+    }
+    if (login) localStorage.setItem('jwt', val.access_token);
   };
 
   const httpHandler = async body => {
     if (!login) {
-      requestHttp(getAuth(login, body, getValue));
-      navigate('/signin', { replace: true });
+      await requestHttp(getAuth(login, body, getValue));
+      if (!error) navigate('/signin', { replace: true });
     } else {
       await requestHttp(getAuth(login, body, getValue));
-      localStorage.setItem('jwt', token);
-      navigate('/todo', { replace: true });
+      if (!error) navigate('/todo', { replace: true });
     }
   };
 

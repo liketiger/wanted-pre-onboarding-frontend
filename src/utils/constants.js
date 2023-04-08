@@ -29,12 +29,13 @@ const CONSTANTS = {
     },
     getValue
   }),
-  deleteTodo: id => ({
+  deleteTodo: (id, getValue) => ({
     url: `/todos/${id}`,
     method: 'DELETE',
     headers: {
       Authorization: `Bearer ${localStorage.getItem('jwt')}`,
     },
+    getValue
   }),
   updateTodo: (id, todo, isCompleted, getValue) => ({
     url: `/todos/${id}`,

@@ -54,7 +54,8 @@ export const TodoProvider = props => {
   let responseData = null;
 
   const fetchTodoHandler = async () => {
-    const fetchTodo = data => {
+    const fetchTodo = (data, isOk) => {
+      if (!isOk) alert(data.message);
       responseData = data;
     }
 
@@ -64,7 +65,8 @@ export const TodoProvider = props => {
 
   const addTodoHandler = async newTodo => {
     if (newTodo.trim().length === 0) return;
-    const addNewTodo = data => {
+    const addNewTodo = (data, isOk) => {
+      if (!isOk) alert(data.message);
       responseData = data;
     }
 
@@ -73,20 +75,27 @@ export const TodoProvider = props => {
   };
 
   const deleteTodoHandler = async id => {
-    await requestHttp(deleteTodo(id));
+    const getError = (data, isOk) => {
+      if (!isOk) alert(data.message);
+    }
+
+    await requestHttp(deleteTodo(id, getError));
     dispatchTodo({ type: 'DELETE', id });
   };
 
   const completeTodoHandler = async (id, todo, isCompleted) => {
-    const completeTodo = () => {};
+    const getError = (data, isOk) => {
+      if (!isOk) alert(data.message);
+    };
 
-    await requestHttp(updateTodo(id, todo, isCompleted, completeTodo));
+    await requestHttp(updateTodo(id, todo, isCompleted, getError));
     dispatchTodo({ type: 'COMPLETE', id });
   };
 
   const updateTodoHandler = async (id, newTodo, isCompleted) => {
     if (newTodo.trim().length === 0) return;
-    const updateNewTodo = data => {
+    const updateNewTodo = (data, isOk) => {
+      if (!isOk) alert(data.message);
       responseData = data;
     };
 
