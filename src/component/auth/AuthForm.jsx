@@ -73,7 +73,7 @@ const AuthForm = props => {
       <AuthInput 
         type='password'
         data-testid='password-input'
-        placeholder='비밀번호'
+        placeholder={`비밀번호${login ? '' : ' (8자리 이상)'}`}
         ref={pwdInput}
         onChange={validate}
       />

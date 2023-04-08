@@ -42,7 +42,7 @@ const TodoItem = ({ item, index }) => {
       </TodoLabel>
       <TodoBtnWrapper>
         {!editMode && (
-          <TodoBtn data-testid='modify-button' onClick={editHandler}>
+          <TodoBtn data-testid='modify-button' disabled={isCompleted} onClick={editHandler}>
             수정
           </TodoBtn>
         )}
@@ -130,6 +130,12 @@ const TodoBtn = styled(Button)`
   height: 30px;
   margin-right: 10px;
   border-radius: 5px;
+
+  &:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
 `;
 
 const TodoBtnWrapper = styled.div`
