@@ -8,7 +8,7 @@
 6. [Feature Implementation list](#👉-feature-implementation-list)
 7. [회고록](#👉-회고록)
 
-#👉 프로젝트의 실행 방법
+# 👉 프로젝트의 실행 방법
 
 > npm install<br>npm start
 
