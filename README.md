@@ -1,12 +1,12 @@
 ## 목차
 
 1. [프로젝트의 실행 방법](#프로젝트의-실행-방법)
-2. [배포 사이트 주소](#👉-배포-사이트-주소)
-3. [기술 스택](#👉-기술-스택)
-4. [데모 영상](#👉-데모-영상)
-5. [Github commit convention](#👉-github-commit-convention)
-6. [Feature Implementation list](#👉-feature-implementation-list)
-7. [회고록](#👉-회고록)
+2. [배포 사이트 주소](#배포-사이트-주소)
+3. [기술 스택](#기술-스택)
+4. [데모 영상](#데모-영상)
+5. [Github commit convention](#github-commit-convention)
+6. [Feature Implementation list](#feature-implementation-list)
+7. [회고록](#회고록)
 
 # 프로젝트의 실행 방법
 
@@ -14,13 +14,13 @@
 
 <br>
 
-# 👉 배포 사이트 주소
+# 배포 사이트 주소
 
 https://wanted-pre-onboarding-frontend-mu-silk.vercel.app/
 
 <br>
 
-# 👉 기술 스택
+# 기술 스택
 
 <div align=left>
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
@@ -32,14 +32,14 @@ https://wanted-pre-onboarding-frontend-mu-silk.vercel.app/
 
 <br>
 
-# 👉 데모 영상
+# 데모 영상
 
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/50165633/230559119-90ee54b8-2ded-41c2-8223-d5c963ee5e13.gif)
 ![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/50165633/230560805-aa57cf40-9a41-4354-8f89-1f6774d5e0dc.gif)
 
 <br>
 
-# 👉 Github commit convention
+# Github commit convention
 
 > Message format : <br>`type of commit : commit message`
 
@@ -56,7 +56,7 @@ https://wanted-pre-onboarding-frontend-mu-silk.vercel.app/
 
 ---
 
-# 👉 Feature Implementation list
+# Feature Implementation list
 
 ## Signup / Signin
 - [x] Assignment 1
@@ -113,9 +113,10 @@ https://wanted-pre-onboarding-frontend-mu-silk.vercel.app/
 - [x] add logout feature
 - [x] deploy website
 
-# 👉 회고록
+# 회고록
 사실 이 프로젝트가 처음으로 해보는 리액트 프로젝트라 많이 부족한 점이 많았다. <br>
 패턴은 ContextAPI를 사용하여 자연스럽게 FLUX 패턴을 사용하게 되었고 <br>
 커스텀 훅과 useCallback 등을 이용하여 좀 더 최적화 할 수 있었을텐데 시간이 부족하여 하지 못하였다. <br>
-css는 styled 컴포넌트를 처음으로 써보았는데 파일이 분리되지 않는 장점이 있었으나 파일내 코드가 길어지는 단점이 있었다. <br>
+css는 styled 컴포넌트를 처음으로 써보았는데 파일이 분리되지 않는 장점이 있었으나 <br>
+파일내 코드가 길어지는 단점이 있었다. <br>
 아직까지 각 부분들에서 무엇이 best practice며 컨벤션인지 잘 모르겠다.
