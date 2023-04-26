@@ -4,7 +4,7 @@
 2. [배포 사이트 주소](#👉-배포-사이트-주소)
 3. [기술 스택](#👉-기술-스택)
 4. [데모 영상](#👉-데모-영상)
-5. [Github commit convention](#github-commit-convention)
+5. [Github commit convention](#👉-github-commit-convention)
 6. [Feature Implementation list](#👉-feature-implementation-list)
 7. [회고록](#👉-회고록)
 
