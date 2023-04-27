@@ -115,7 +115,7 @@ https://wanted-pre-onboarding-frontend-mu-silk.vercel.app/
 
 # 회고록
 사실 이 프로젝트가 처음으로 해보는 리액트 프로젝트라 많이 부족한 점이 많았다. <br>
-패턴은 ContextAPI를 사용하여 자연스럽게 FLUX 패턴을 사용하게 되었고 <br>
+패턴은 ContextAPI와 useReducer를 사용하여 자연스럽게 FLUX 패턴을 사용하게 되었고 <br>
 커스텀 훅과 useCallback 등을 이용하여 좀 더 최적화 할 수 있었을텐데 시간이 부족하여 하지 못하였다. <br>
 css는 styled 컴포넌트를 처음으로 써보았는데 파일이 분리되지 않는 장점이 있었으나 <br>
 파일내 코드가 길어지는 단점이 있었다. <br>
